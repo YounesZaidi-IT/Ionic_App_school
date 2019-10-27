@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-navbar >
+    <ion-title>
+      <p style="color:black;font-size:14px">Survey</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="tutorial-page ">
+ <img src="./assets/imgs/survey_bg.png" style="width:82%;margin:auto;display:block;">
+<ion-list>
+  <ion-item *ngFor ="let data of datagame">
+    <ion-thumbnail item-start>
+      <img src="./assets/imgs/childe_profile.svg" style="width:50px">
+    </ion-thumbnail>
+    <h2>{{data.nom}}</h2>
+	<code style="font-size:12px;color:#6f6f6f">{{data.date_add_question}}</code>
+    <button ion-button clear item-end (click)="open_survey(data.id_questionnaire)">Answer</button>
+  </ion-item>
+</ion-list>
+	<!--<div padding>
+		<ion-row class="row">
+		    <ion-col class="col">
+		     <div style='font-size:12px;float:left' (click)="home()"><a>< Back to home.</a></div>
+			</ion-col>
+        </ion-row>
+	</div>
+	-->
+</ion-content>

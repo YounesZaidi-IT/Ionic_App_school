@@ -1,0 +1,47 @@
+
+<ion-header no-border>
+  <ion-navbar >
+    <ion-title>
+      <p style="color:black;font-size:14px">Activities Games</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getstart ">
+<div style='margin-top:1%'> 
+	<img style="width:34%;margin:auto;display:block;margin-top:-3px" src="./assets/imgs/activities.png"/>
+    <div class="card-title" style='font-size:16px' text-center><b> Gaming activities</b></div>
+</div>
+<div *ngFor ="let data of datagame ">
+<ion-card >
+  <ion-item>
+    <h2>{{data.nom}}</h2>
+    <p>{{data.date}}</p>
+  </ion-item>
+  <ion-card-content>
+    <p>{{data.activite_jeucol}}</p>
+	<p>interpretation <code>{{data.interpretation}}</code></p>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="bookmark"></ion-icon>
+        <div>Type : <code style="color:black">{{data.type}}</code></div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="bulb"></ion-icon>
+        <div>Concept : <code style="color:black">{{data.concept}}</code></div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+</div>
+	<!--<div padding>
+		<ion-row class="row">
+		    <ion-col class="col">
+		     <div style='font-size:12px;float:left' (click)="home()"><a>< Back to home.</a></div>
+			</ion-col>
+        </ion-row>
+	</div>--->
+</ion-content>

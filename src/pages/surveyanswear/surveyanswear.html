@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <ion-navbar >
+    <ion-title>
+      <p style="color:black;font-size:14px">Survey Answear</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="tutorial-page ">
+  <ion-slides #slider> 
+    <ion-slide *ngFor="let slide of slides" >
+      <ion-toolbar>
+        <ion-buttons end>
+        </ion-buttons>
+      </ion-toolbar>
+      <h3 class="slide-title">{{slide.question}}</h3>
+	  <div style="margin-top:15%;width:80%;margin-left:auto;margin-right:auto;">
+		<ion-list radio-group (ionChange)="mcqAnswer($event,slide.question)">	 	
+		<ion-item style="background-color:transparent" *ngFor="let answ of slide.data; let index = index; ">
+		  <ion-label style='font-size:11px'>{{slide.data[index]}}</ion-label>
+		  <ion-radio  value="{{slide.data[index]}}"></ion-radio>
+		 </ion-item>
+		</ion-list>
+		 <div *ngIf="currentIndex > 0" class="swiper-button-prev swiper-button-black" (click)="previousSlide()"></div>
+         <div *ngIf="currentIndex < slides.length-1" class="swiper-button-next swiper-button-black" (click)="nextSlide()"></div>	
+	  </div>	
+	</ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+	  <ion-icon ios="ios-help" md="md-bulb"></ion-icon>
+      <h2 class="slide-title">Save your reponse ?</h2>
+      <button ion-button large clear icon-end color="primary" (click)="reponse_data()">
+        Submite
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

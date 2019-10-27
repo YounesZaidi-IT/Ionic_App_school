@@ -1,0 +1,28 @@
+<ion-content padding class="getstart ">
+    <div style='margin-top:30%'>
+	  <img style="width:20%;margin:auto;display:block;"src="./assets/imgs/logo.png"/>
+	  <div class="card-title" style='font-size:18px' text-center><b>LOGIN</b></div>
+	</div>
+	<ion-list style='margin-top:18%'>
+	    <ion-item style="background-color:transparent">
+		   <ion-label stacked ><ion-icon ios="ios-contacts" md="md-contacts"></ion-icon> Login</ion-label>
+           <ion-input  type="text" name="email" ngModel  #username style='color:#3c4656'></ion-input>
+	    </ion-item>
+	    <ion-item style="background-color:transparent">
+	       <ion-label stacked>  <ion-icon ios="ios-lock" md="md-lock"></ion-icon> Password</ion-label>
+		   <ion-input type="password" style='color:#3c4656' #password ></ion-input>
+	    </ion-item>
+	</ion-list>
+	<div padding>
+	    <button block ion-button  (click)="signIn()" style="margin-bottom:10px">Sign In</button>
+		<ion-row class="row">
+		    <ion-col class="col">
+		     <div style='font-size:12px;float:left' (click)="register()">Don't have an account <a><br>Register here.</a></div>
+			</ion-col>
+			<ion-col class="col" col-auto=""></ion-col>
+			<ion-col class="col">
+			 <div style='font-size:12px;float:right' (click)="ForgotPassword()" > <a>Forgot Password !</a></div>
+            </ion-col>
+        </ion-row>
+	</div>
+</ion-content>

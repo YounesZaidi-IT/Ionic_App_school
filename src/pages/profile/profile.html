@@ -1,0 +1,55 @@
+<ion-header no-border>
+  <ion-navbar >
+    <ion-title>
+      <p style="color:black;font-size:14px">Profile</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="tutorial-page ">
+<ion-list class="grid1 card-background-page">
+    <ion-row class="row1"> 
+      <ion-col style="background-color:white !important">
+          <ion-card class="card card-md">
+		   <img src="./assets/imgs/user.jpg">
+		   <div class="card-title" style="font-size:14px;color:black;margin-top:30%"> 
+			  <code>{{childe_name}}</code>
+		   </div>
+	  	 </ion-card>
+      </ion-col>	  
+    </ion-row>
+</ion-list>
+	<div style="width:92% !important;margin-bottom:15px;margin-top:11px;margin-left:10px;border:1px solid black;border-radius: 10px;">
+		<ion-icon ios="ios-calendar" md="md-calendar" style='font-size:23px;margin-left:8px;margin-top:9px'></ion-icon> <code>Birth Date</code> : <b>{{date_n}}</b><br><br>
+        <ion-icon ios="ios-school" md="md-school" style='font-size:23px;margin-left:8px'></ion-icon> <code>Etablissement</code> : <b>{{school}}</b><br><br>
+	    <ion-icon ios="ios-time" md="md-time" style='font-size:23px;margin-left:8px'></ion-icon> <code>First Registration</code> : <b>{{fisrt_inscr}}</b><br><br>
+    </div>
+<ion-list class="grid1 card-background-page">
+    <ion-row class="row1">
+      <ion-col style="background-color:white !important">
+          <ion-card class="card card-md">
+		   <img src="./assets/imgs/white.png">
+		   <div class="card-title" style="font-size:14px;color:black;"  (click)="report('diagnostic')"> 
+		     <img style="width: 8vh !important;" src="./assets/imgs/Diagnostic.png">
+			  Report Diagnostic
+		   </div> 
+	  	 </ion-card>
+      </ion-col>	  
+      <ion-col style="background-color:white !important">
+          <ion-card class="card card-md">
+		   <img src="./assets/imgs/white.png">
+		   <div class="card-title" style="font-size:14px;color:black;"  (click)="report('school')"> 
+		     <img style="width: 8vh !important;" src="./assets/imgs/school.png">
+			  Report school 
+		   </div>
+	  	 </ion-card>
+      </ion-col>	  
+    </ion-row>
+</ion-list>
+	<!--<div padding>
+		<ion-row class="row">
+		    <ion-col class="col">
+		     <div style='font-size:12px;float:left' (click)="home()"><a>< Back to home.</a></div>
+			</ion-col>
+        </ion-row>
+	</div>--->
+</ion-content>

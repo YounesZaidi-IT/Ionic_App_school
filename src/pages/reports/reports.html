@@ -1,0 +1,43 @@
+<ion-header no-border>
+  <ion-navbar >
+    <ion-title>
+      <p style="color:black;font-size:14px">Reports</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="tutorial-page ">
+ <img src="./assets/imgs/repport_bg.png" style="width:80%;margin:auto;display:block;margin-top:-7%"/>
+<ion-card *ngFor ="let data of datagame">
+  <ion-card-content>
+      <ion-card-title>
+       <h1 style='font-size:19px'>{{data.texte_question}}</h1>
+      </ion-card-title>
+    <div> Answer :</div>
+	<code style='margin-left:8px'>
+     {{data.text_reponse}}
+    </code>
+  </ion-card-content>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="bookmark"></ion-icon>
+        <div>{{data.nom}}</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-start clear small>
+        <ion-icon name="calendar" style="color:#ff6060"></ion-icon>
+        <div style="color:#ff6060">{{data.date}}</div>
+      </button>
+    </ion-col>    
+	<ion-col>
+      <ion-icon ios="ios-trash" md="md-trash" (click)="remove_answer(data.id_parent_reponse)"></ion-icon>
+    </ion-col>
+
+  </ion-row>
+</ion-card>
+</ion-content>
+
+

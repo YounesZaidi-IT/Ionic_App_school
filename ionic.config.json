@@ -1,0 +1,7 @@
+{
+  "name": "ionic_FE",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

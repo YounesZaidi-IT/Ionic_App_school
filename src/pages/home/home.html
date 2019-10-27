@@ -1,0 +1,90 @@
+<ion-header no-border>
+  <ion-navbar hideBackButton>
+    <ion-title>
+      <p style="color:black">Home</p>
+    </ion-title>
+	 <!--<ion-buttons end> <ion-icon name="more" style="color:#676767 !important;font-size:28px"></ion-icon> </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+<ion-content class="card-background-page grid-basic-page content content-md2 statusbar-padding">
+<div class="scroll-content" >
+  <!-- (click)="status=!status"   [ngClass]="status ? 'ion-cardd1' : 'ion-cardd2'"  -->
+	<div  #showdiv (click)="status=!status" [ngClass]="status ? 'ion-true' : 'ion-false'" (click)="check(status)" class="{{bg}}" >
+	 <img src="./assets/imgs/refrech.svg" style="width:4vh;position: relative;left:43%;margin-top:8px"/>
+	   <div  style="position: absolute;top: 25%;margin-left:45px">
+	      <ion-icon name="ios-home-outline"></ion-icon>
+	   </div>
+	   <hr> 
+	    <div class="card-title2"  style='font-size:2vh;text-transform: capitalize;color:#131313'><code>{{refer}}</code></div>
+	    <div class="card-subtitle2" style="font-size:2vh;text-transform: capitalize;color:#effff6"><code>Login: {{login_name}}</code></div>
+	</div>
+  <ion-grid class="grid">
+    <ion-row class="row">
+      <ion-col class="col">
+          <ion-card>
+		   <img src="./assets/imgs/white.png" />
+		   <div class="card-title" style='font-size:2vh;color:black' (click)="profil()"> 
+		   Child's profile
+		     <img src="./assets/imgs/childe_profile.svg"/>
+		   </div>
+		   <div class="card-subtitle"></div>
+	  	 </ion-card>
+      </ion-col>
+      <ion-col class="col">
+          <ion-card>
+		   <img src="./assets/imgs/white.png" />
+		   <div class="card-title" style='font-size:2vh;color:black' (click)="activities()"> 
+		   Gaming activities
+		     <img src="./assets/imgs/games.svg"/>
+		   </div>
+		   <div class="card-subtitle"></div>
+	  	 </ion-card>		 
+      </ion-col>
+    </ion-row>
+    <ion-row class="row">
+      <ion-col class="col">
+          <ion-card>
+		   <img src="./assets/imgs/white.png" />
+		   <div class="card-title" style='font-size:2vh;color:black' (click)="survey()"> 
+		   Survey
+		     <img src="./assets/imgs/survey.svg"/>
+		   </div>
+		   <div class="card-subtitle"></div>
+	  	 </ion-card>
+      </ion-col>
+      <ion-col class="col">
+          <ion-card>
+		   <img src="./assets/imgs/white.png" />
+		   <div class="card-title" style='font-size:2vh;color:black'  (click)="parameter()"> 
+		   Account parameter
+		     <img src="./assets/imgs/setting.svg"/> 
+		   </div>
+		   <div class="card-subtitle"></div>
+	  	 </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row">
+      <ion-col class="col">
+          <ion-card>
+		   <img src="./assets/imgs/white.png" />
+		   <div class="card-title" style='font-size:2vh;color:black' (click)="reports()"> 
+		   Reports
+		     <img src="./assets/imgs/repport.svg"/>
+		   </div>
+		   <div class="card-subtitle"></div>
+	  	 </ion-card>
+      </ion-col>
+      <ion-col class="col">
+          <ion-card>
+		   <img src="./assets/imgs/white.png" />
+		   <div class="card-title" style='font-size:2vh;color:black' (click)="Logout()"> 
+		   Logout
+		     <img src="./assets/imgs/logout.svg"/>
+		   </div>
+		   <div class="card-subtitle"></div>
+	  	 </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>
